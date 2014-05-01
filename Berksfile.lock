@@ -1,0 +1,9 @@
+DEPENDENCIES
+  packer
+    path: .
+    metadata: true
+
+GRAPH
+  ark (0.4.2)
+  packer (0.3.0)
+    ark (~> 0.4.0)
