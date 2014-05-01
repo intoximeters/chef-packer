@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
-gem 'stove'
+gem 'berkshelf', '~> 3.1.1'
+# Temporarily disabling due to https://github.com/sethvargo/stove/pull/31
+#gem 'stove'
 gem 'thor-foodcritic'
-gem 'test-kitchen', '~> 1.0.0.alpha', :group => :integration
+gem 'test-kitchen', '~> 1.2.1', :group => :integration
 gem 'kitchen-vagrant', :group => :integration
