@@ -4,6 +4,6 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  ark (0.4.2)
-  packer (0.3.0)
-    ark (~> 0.4.0)
+  ark (0.8.2)
+  packer (0.3.2)
+    ark (~> 0.8.2)
