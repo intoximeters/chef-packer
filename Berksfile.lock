@@ -5,5 +5,5 @@ DEPENDENCIES
 
 GRAPH
   ark (0.8.2)
-  packer (0.3.2)
+  packer (0.3.4)
     ark (~> 0.8.2)
