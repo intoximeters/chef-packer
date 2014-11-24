@@ -26,7 +26,7 @@ link 'packer-to-packer-packer' do
   owner 'root'
   group 'root'
 
-  target "/usr/local/packer-#{node[:packer][:version]}/packer"
+  target_file "/usr/local/packer-#{node[:packer][:version]}/packer"
   to "/usr/local/packer-#{node[:packer][:version]}/packer-packer"
 
   not_if { ::File.exists?("/usr/local/packer-#{node[:packer][:version]}/packer") }
