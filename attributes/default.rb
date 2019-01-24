@@ -1,6 +1,6 @@
-node.default[:packer][:url_base] = "https://dl.bintray.com/mitchellh/packer"
-node.default[:packer][:version] = "0.7.1"
-node.default[:packer][:arch] = kernel['machine'] =~ /x86_64/ ? "amd64" : "386"
+node.default[:packer][:url_base] = 'https://releases.hashicorp.com/packer/0.11.0'
+node.default[:packer][:version] = 'packer_0.11.0'
+node.default[:packer][:arch] = node['kernel']['machine'] =~ /x86_64/ ? "amd64" : "386"
 
 # Transform raw output of the bintray checksum list into a Hash[filename, checksum].
 # https://dl.bintray.com/mitchellh/packer/${VERSION}_SHA256SUMS?direct

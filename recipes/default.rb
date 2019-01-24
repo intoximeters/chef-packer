@@ -29,5 +29,5 @@ link 'packer-to-packer-packer' do
   target_file "/usr/local/packer-#{node[:packer][:version]}/packer"
   to "/usr/local/packer-#{node[:packer][:version]}/packer-packer"
 
-  not_if { ::File.exists?("/usr/local/packer-#{node[:packer][:version]}/packer") }
+  not_if { ::File.exist?("/usr/local/packer-#{node[:packer][:version]}/packer") }
 end

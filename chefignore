@@ -53,6 +53,8 @@ test/*
 features/*
 Guardfile
 Procfile
+vendor
+vendor/*
 
 # SCM #
 #######
