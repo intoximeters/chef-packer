@@ -6,4 +6,4 @@ description      'Installs/Configures packer'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.3.4'
 
-depends 'ark', '~> 0.8.2'
+depends 'ark'
