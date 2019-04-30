@@ -11,7 +11,7 @@ task(:kitchen) do
 end
 
 task(:kitchen_ci) do
-  sh 'source /opt/test-kitchen/kitchen_wrapper.sh && bundle exec kitchen test'
+  sh 'source /opt/test-kitchen/kitchen_wrapper.sh && bundle exec kitchen test -c'
 end
 
 task ci: [:berks, :spec, :kitchen_ci]
