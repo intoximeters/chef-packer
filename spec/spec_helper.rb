@@ -1,7 +1,6 @@
 require 'bundler/setup'
 require 'chefspec'
 require 'chefspec/berkshelf'
-require 'fauxhai'
 
 RSpec.configure do |config|
   config.platform = 'centos'
