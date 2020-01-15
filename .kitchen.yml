@@ -8,9 +8,9 @@ provisioner:
   require_chef_omnibus: '13.12.3'
 
 platforms:
-  - name: centos-7.5
+  - name: centos-7.7
     driver:
-      box: bento/centos-7.5
+      box: bento/centos-7.7
 
 suites:
   - name: default
