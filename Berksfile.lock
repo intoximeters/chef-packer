@@ -4,13 +4,7 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  ark (4.0.0)
-    build-essential (>= 0.0.0)
-    seven_zip (>= 0.0.0)
-  build-essential (8.2.1)
-    mingw (>= 1.1)
-    seven_zip (>= 0.0.0)
-  mingw (2.1.0)
+  ark (5.0.0)
     seven_zip (>= 0.0.0)
   packer (0.3.9)
     ark (>= 0.0.0)
