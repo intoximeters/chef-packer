@@ -12,7 +12,7 @@ GRAPH
     seven_zip (>= 0.0.0)
   mingw (2.1.0)
     seven_zip (>= 0.0.0)
-  packer (0.3.8)
+  packer (0.3.9)
     ark (>= 0.0.0)
   seven_zip (3.1.2)
     windows (>= 0.0.0)
