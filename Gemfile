@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'berkshelf'
 gem 'rake'
-gem 'chef', '~> 13'
+gem 'chef'
 gem 'chef-zero'
 group :test do
   gem 'test-kitchen'
