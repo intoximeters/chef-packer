@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Pod
+spec:
+  imagePullSecrets:
+    - name: intox-gcr
+  containers:
+  # A container named 'jnlp' must be defined here if we want to use multiple
+  # containers.  A pod template added to the global config for the kubernetes
+  # plugin will be ignored, which isn't clear from the plugin documentation.
+  - name: jnlp
+    image: jenkins/jnlp-slave
+    # The jnlp java process seems to consistently use around 200MB of RAM and
+    # probably varies less in memory usage than the other containers.  The CPU
+    # usage is more bursty, with a lot of activity when the container spins up,
+    # then mostly idle until the build ends and it's destroyed.
+    resources:
+      limits:
+        cpu: "1000m"
+        memory: "400Mi"
+      requests:
+        cpu: "50m"
+        memory: "200Mi"
+  - name: chef-packer-ci
+    image: us.gcr.io/intox-gcloud/base-ci:latest
+    # The memory request is a bit on the high end of expected usage, with the
+    # limit being a more or less arbitrary guess at what could be expected with
+    # a memory leak of some kind along with the amount of RAM we could afford
+    # to spare in our k8s cluster when the maximum number of jobs are running
+    # on jenkins.
+    resources:
+      limits:
+        cpu: "1000m"
+        memory: "2000Mi"
+      requests:
+        cpu: "500m"
+        memory: "1000Mi"
+    tty: true
+    volumeMounts:
+    - mountPath: /home/jenkins/.ssh
+      name: ssh
+    - mountPath: /home/jenkins/.chef
+      name: chef
+    - mountPath: /opt/test-kitchen
+      name: test-kitchen
+  volumes:
+  - name: chef
+    secret:
+      secretName: chef
+  - name: ssh
+    secret:
+      secretName: ssh
+  - name: test-kitchen
+    secret:
+      secretName: test-kitchen
