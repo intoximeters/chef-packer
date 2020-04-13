@@ -1,7 +1,6 @@
 pipeline {
   agent {
     kubernetes {
-      label 'chef-packer-ci'
       yamlFile 'jenkins-pod.yaml'
     }
   }
