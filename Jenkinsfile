@@ -1,11 +1,11 @@
 pipeline {
   agent {
     kubernetes {
-      label 'chef-packer-ci'
       yamlFile 'jenkins-pod.yaml'
     }
   }
   options {
+    disableConcurrentBuilds()
     retry(2)
     timestamps()
   }
