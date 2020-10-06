@@ -8,7 +8,7 @@ spec:
   # containers.  A pod template added to the global config for the kubernetes
   # plugin will be ignored, which isn't clear from the plugin documentation.
   - name: jnlp
-    image: jenkins/jnlp-slave
+    image: jenkins/inbound-agent
     # The jnlp java process seems to consistently use around 200MB of RAM and
     # probably varies less in memory usage than the other containers.  The CPU
     # usage is more bursty, with a lot of activity when the container spins up,
