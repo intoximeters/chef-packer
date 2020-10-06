@@ -6,7 +6,7 @@ DEPENDENCIES
 GRAPH
   ark (5.0.0)
     seven_zip (>= 0.0.0)
-  packer (0.4.3)
+  packer (0.4.4)
     ark (>= 0.0.0)
   seven_zip (3.1.2)
     windows (>= 0.0.0)
