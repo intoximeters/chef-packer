@@ -16,7 +16,7 @@ pipeline {
           sh """
 #!/bin/bash -ex
 
-export PATH=/opt/intox-ruby26/bin:$PATH
+export PATH=/opt/intox-ruby27/bin:$PATH
 
 # Whitespace check
 git diff --check
