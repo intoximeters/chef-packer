@@ -13,5 +13,4 @@ group :test do
   gem 'chefspec'
   gem 'kitchen-vagrant'
   gem 'kitchen-ec2'
-  gem 'thor-foodcritic'
 end
