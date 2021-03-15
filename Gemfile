@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 gem 'berkshelf'
 gem 'rake'
-gem 'chef'
+
+# Chef 16 has a few breaking changes that might need to be addressed.  See:
+# https://docs.chef.io/release_notes_client/#breaking-changes
+gem 'chef', '~> 15'
+
 gem 'chef-zero'
 group :test do
   gem 'test-kitchen'
