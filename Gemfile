@@ -8,6 +8,6 @@ group :test do
   gem 'test-kitchen'
   gem 'chefspec'
   gem 'kitchen-vagrant'
-  gem 'kitchen-google', '~> 1.4.0'
+  gem 'kitchen-ec2'
   gem 'thor-foodcritic'
 end
